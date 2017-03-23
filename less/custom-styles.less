@@ -29,7 +29,13 @@
 @color-blue: #0b5c8e;
 @color-orange: #ff6926;
 
-
+.transformed() {
+  -webkit-transform: skew(60deg) rotate(60deg);
+  -moz-transform: skew(60deg) rotate(60deg);
+  -ms-transform: skew(60deg) rotate(60deg);
+  -o-transform: skew(60deg) rotate(60deg);
+  transform: skew(60deg) rotate(60deg);
+}
 
 * {
   margin: 0;
@@ -231,6 +237,7 @@ header[role='banner'] {
       padding-left: 30px;
 
       &:before {
+        .transformed();
         content: '';
         display: block;
         height: 8px;
@@ -239,11 +246,6 @@ header[role='banner'] {
         position: absolute;
         top: 4px;
         left: 14px;
-        -webkit-transform: skew(60deg) rotate(60deg);
-        -moz-transform: skew(60deg) rotate(60deg);
-        -ms-transform: skew(60deg) rotate(60deg);
-        -o-transform: skew(60deg) rotate(60deg);
-        transform: skew(60deg) rotate(60deg);
       }
 
     }
@@ -362,7 +364,7 @@ header[role='banner'] {
       vertical-align: middle;
       width: 16px;
       height: 16px;
-      background: url(../source/images/phone-icon.png);
+      background: url(../source/images/icon-phone.png);
       margin-right: 8px;
       -webkit-transition: .4s;
       -moz-transition: .4s;
@@ -652,17 +654,13 @@ footer[role='contentinfo'] {
       margin: 2px 0;
 
       button {
+        .transformed();
         display: block;
         width: 10px;
         height: 15px;
         background: #fff;
         font-size: 0;
         color: transparent;
-        -webkit-transform: skew(60deg) rotate(60deg);
-        -moz-transform: skew(60deg) rotate(60deg);
-        -ms-transform: skew(60deg) rotate(60deg);
-        -o-transform: skew(60deg) rotate(60deg);
-        transform: skew(60deg) rotate(60deg);
 
         &:hover {
           background: @color-orange;
@@ -682,10 +680,8 @@ footer[role='contentinfo'] {
 
 }
 
-
-
 /***********************************************************************************************************************
-************ general
+************ advantages
 ***********************************************************************************************************************/
 
 

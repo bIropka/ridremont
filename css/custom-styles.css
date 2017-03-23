@@ -180,6 +180,11 @@ header[role='banner'] .wrapper-inner:after {
   padding-left: 30px;
 }
 .header-promo ul li:before {
+  -webkit-transform: skew(60deg) rotate(60deg);
+  -moz-transform: skew(60deg) rotate(60deg);
+  -ms-transform: skew(60deg) rotate(60deg);
+  -o-transform: skew(60deg) rotate(60deg);
+  transform: skew(60deg) rotate(60deg);
   content: '';
   display: block;
   height: 8px;
@@ -188,11 +193,6 @@ header[role='banner'] .wrapper-inner:after {
   position: absolute;
   top: 4px;
   left: 14px;
-  -webkit-transform: skew(60deg) rotate(60deg);
-  -moz-transform: skew(60deg) rotate(60deg);
-  -ms-transform: skew(60deg) rotate(60deg);
-  -o-transform: skew(60deg) rotate(60deg);
-  transform: skew(60deg) rotate(60deg);
 }
 .header-links {
   display: block;
@@ -296,7 +296,7 @@ header[role='banner'] .wrapper-inner:after {
   vertical-align: middle;
   width: 16px;
   height: 16px;
-  background: url(../source/images/phone-icon.png);
+  background: url(../source/images/icon-phone.png);
   margin-right: 8px;
   -webkit-transition: .4s;
   -moz-transition: .4s;
@@ -523,17 +523,17 @@ footer[role='contentinfo'] .wrapper-inner:after {
   margin: 2px 0;
 }
 .slider-top .slick-dots li button {
+  -webkit-transform: skew(60deg) rotate(60deg);
+  -moz-transform: skew(60deg) rotate(60deg);
+  -ms-transform: skew(60deg) rotate(60deg);
+  -o-transform: skew(60deg) rotate(60deg);
+  transform: skew(60deg) rotate(60deg);
   display: block;
   width: 10px;
   height: 15px;
   background: #fff;
   font-size: 0;
   color: transparent;
-  -webkit-transform: skew(60deg) rotate(60deg);
-  -moz-transform: skew(60deg) rotate(60deg);
-  -ms-transform: skew(60deg) rotate(60deg);
-  -o-transform: skew(60deg) rotate(60deg);
-  transform: skew(60deg) rotate(60deg);
 }
 .slider-top .slick-dots li button:hover {
   background: #ff6926;
@@ -542,7 +542,7 @@ footer[role='contentinfo'] .wrapper-inner:after {
   background: #ff6926;
 }
 /***********************************************************************************************************************
-************ general
+************ advantages
 ***********************************************************************************************************************/
 /***********************************************************************************************************************
 ************ general
