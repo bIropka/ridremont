@@ -1316,9 +1316,120 @@ footer[role='contentinfo'] {
 }
 
 /***********************************************************************************************************************
-************ general
+************ steps
 ***********************************************************************************************************************/
 
+.steps {
+  text-align: center;
+  margin-bottom: 40px;
+
+  ul {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    counter-reset: list;
+
+    li {
+      display: block;
+      position: relative;
+
+      &:before {
+        content: counter(list);
+        counter-increment: list;
+        display: block;
+        width: 33px;
+        height: 33px;
+        background: @color-orange;
+        line-height: 33px;
+        color: #fff;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: -10px;
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 5px solid @color-orange;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 23px;
+        z-index: 2;
+      }
+
+      .arrow {
+        display: block;
+        width: 66px;
+        height: 21px;
+        position: absolute;
+        top: 65px;
+        left: ~"calc(100% + 20px)";
+        font-family: 'Exo2 Bold', sans-serif;
+        font-size: 15px;
+      }
+
+      span {
+        font-family: 'Exo2 Bold', sans-serif;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+  .image-step {
+    .circle();
+    width: 155px;
+    height: 155px;
+    padding: 3px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 15px;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 35px;
+      top: 35px;
+      background: @color-blue;
+      -webkit-transition: .2s;
+      -moz-transition: .2s;
+      -ms-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+    }
+
+    &:hover:after {
+      top: 0;
+      bottom: 0;
+    }
+
+  }
+
+  .image-wrap {
+    .circle();
+    width: 149px;
+    height: 149px;
+    margin: 0 auto 10px;
+    border: 10px solid #f3f3f3;
+    z-index: 1;
+  }
+
+}
 
 /***********************************************************************************************************************
 ************ general
