@@ -17,6 +17,10 @@
   font-family: 'PT Sans Bold';
   src: url("../source/fonts/ptsansbold.woff") format("woff"), url("../source/fonts/ptsansbold.ttf") format("truetype"), url("../source/fonts/ptsansbold.woff2") format("woff2");
 }
+@font-face {
+  font-family: 'PT Sans Italic';
+  src: url("../source/fonts/ptsansitalic.woff") format("woff"), url("../source/fonts/ptsansitalic.ttf") format("truetype"), url("../source/fonts/ptsansitalic.woff2") format("woff2");
+}
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
@@ -99,6 +103,21 @@ button:focus {
 .custom-button:active {
   line-height: 50px;
 }
+.image-wrap {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.image-wrap img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
 .slider-wrap {
   opacity: 0;
   position: relative;
@@ -138,6 +157,42 @@ button:focus {
 }
 .slider-wrap .fa-chevron-right:active {
   left: calc(100% + 35px);
+}
+.top-arrow {
+  position: fixed;
+  left: calc(50% + 665px);
+  bottom: 320px;
+  text-align: center;
+  cursor: pointer;
+  transition: .4s;
+}
+.top-arrow .fa {
+  display: block;
+  font-size: 52px;
+  color: #cbcbcb;
+}
+.top-arrow span {
+  font-family: "PT Sans Bold", sans-serif;
+  text-decoration: underline;
+  color: #0b5c8e;
+}
+.top-arrow:hover .fa {
+  color: #0b5c8e;
+}
+.top-arrow:hover span {
+  text-decoration: none;
+}
+h2 {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 20px;
+  color: #0b5c8e;
+  text-transform: uppercase;
+}
+p {
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 1.4;
+  hyphens: auto;
 }
 /***********************************************************************************************************************
 ************ header
@@ -544,6 +599,473 @@ footer[role='contentinfo'] .wrapper-inner:after {
 /***********************************************************************************************************************
 ************ advantages
 ***********************************************************************************************************************/
+.advantages {
+  background: url(../source/images/background-advantages.jpg);
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.advantages ul {
+  padding: 45px 0 35px;
+}
+.advantages ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.advantages ul li {
+  display: block;
+  width: 25%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.advantages ul li:before {
+  content: '';
+  display: block;
+  margin: 0 auto 20px;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ff6926 url(../source/images/sprite-advantages.png);
+}
+.advantages ul li:after {
+  content: '';
+  display: block;
+  width: 175px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 40px;
+  left: 71%;
+}
+.advantages ul li:nth-child(2):before {
+  background-position: -80px 0;
+}
+.advantages ul li:nth-child(3):before {
+  background-position: -160px 0;
+}
+.advantages ul li:nth-child(4):before {
+  background-position: -240px 0;
+}
+.advantages ul li:last-child:after {
+  display: none;
+}
+.advantages ul li .title {
+  font-family: "PT Sans Bold", sans-serif;
+  color: #75c4f5;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.advantages ul li .text {
+  color: #fff;
+  font-size: 15px;
+}
+.advantages ul li .text:after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 25px;
+  background: url(../source/images/decor-advantages.png);
+  margin: 15px auto 0;
+}
+/***********************************************************************************************************************
+************ services
+***********************************************************************************************************************/
+.services {
+  margin-bottom: 40px;
+}
+.services ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.services ul li {
+  display: block;
+  text-align: center;
+}
+.services ul li .image-wrap {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 129px;
+  height: 129px;
+}
+.services ul li .title {
+  display: inline-block;
+  font-family: 'Exo2 Bold', sans-serif;
+  color: #0b5c8e;
+  text-transform: uppercase;
+  margin: 15px 0 10px;
+}
+.services ul li .service-cost {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background: #ff6926;
+  position: relative;
+}
+.services ul li .service-cost:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #ff6926;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5px;
+}
+/***********************************************************************************************************************
+************ seo
+***********************************************************************************************************************/
+.seo {
+  background: #fff url(../source/images/background-seo.png) no-repeat right bottom;
+  padding: 35px 40px;
+  margin-bottom: 40px;
+}
+.seo ul {
+  display: block;
+  max-width: 700px;
+  margin: 20px 0;
+}
+.seo ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.seo ul li {
+  display: block;
+  float: left;
+  width: 50%;
+  padding-left: 60px;
+  position: relative;
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+.seo ul li .fa {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #0b5c8e;
+  color: #0b5c8e;
+  line-height: 21px;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+.seo ul li span {
+  display: block;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.seo .note {
+  display: inline-block;
+  vertical-align: top;
+  font-family: "PT Sans Italic", sans-serif;
+  max-width: 450px;
+  margin-right: 20px;
+}
+.seo button {
+  display: inline-block;
+}
+/***********************************************************************************************************************
+************ prices
+***********************************************************************************************************************/
+.prices {
+  background: #809fb1;
+  padding: 35px 40px 0 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.prices h2 {
+  color: #fff;
+}
+.prices .all-prices {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  position: absolute;
+  top: 37px;
+  right: 40px;
+  padding-left: 35px;
+}
+.prices .all-prices:before {
+  content: '';
+  display: block;
+  width: 21px;
+  height: 21px;
+  background: url(../source/images/icon-prices.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.prices .items {
+  display: block;
+  margin-top: 30px;
+}
+.prices .items:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.prices .items .item {
+  display: block;
+  width: 22.75%;
+  margin: 0 3% 0 0;
+  float: left;
+  background: #fff;
+  padding: 10px;
+}
+.prices .items .item:last-of-type {
+  margin-right: 0;
+}
+.prices .image-wrap {
+  width: 100%;
+  padding-top: calc(100% - 20px);
+  border: 10px solid #fff;
+  -webkit-box-shadow: 0 0 0 1px #c6c6c6;
+  -moz-box-shadow: 0 0 0 1px #c6c6c6;
+  box-shadow: 0 0 0 1px #c6c6c6;
+}
+.prices .title {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 15px;
+  color: #0b5c8e;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+.prices .title:after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 8px;
+  background: url(../source/images/decor-prices.png);
+  margin: 10px auto 15px;
+}
+.prices .price-value {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.prices ul {
+  border-top: 1px dotted #000;
+  padding: 15px 0;
+}
+.prices ul li {
+  display: block;
+  line-height: 1;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 8px;
+}
+.prices ul li:before {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  background: #ff6926;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 25px;
+}
+.prices ul li:last-child {
+  margin-bottom: 0;
+}
+.prices .show-portfolio,
+.prices .show-cost {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 46px;
+  border: 2px solid #2a393e;
+  background: #2a393e;
+  font-family: 'Exo2 Bold', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.prices .show-portfolio:hover,
+.prices .show-cost:hover {
+  background: #fff;
+  color: #2a393e;
+}
+.prices .show-portfolio:active,
+.prices .show-cost:active {
+  line-height: 50px;
+}
+.prices .show-cost {
+  border: 2px solid #ff6926;
+  background: #ff6926;
+  margin-top: 10px;
+}
+.prices .show-cost:hover {
+  color: #ff6926;
+}
+.prices p {
+  color: #fff;
+  font-size: 15px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+.prices .prices-links {
+  display: block;
+  width: calc(100% + 80px);
+  background: url(../source/images/background-prices-links.jpg);
+  background-size: cover;
+  text-align: center;
+  margin: 0 -40px;
+  padding: 40px 0;
+}
+.prices .prices-links a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 17px;
+  margin-right: 30px;
+}
+.prices .prices-links a:last-of-type {
+  margin-right: 0;
+}
+.prices .prices-links a:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 21px;
+  margin-right: 10px;
+  background: url(../source/images/sprite-prices-links.png);
+  background-size: cover;
+}
+.prices .prices-links a:nth-of-type(2):before {
+  background-position: -25px 0;
+}
+.prices .prices-links a:nth-of-type(3):before {
+  background-position: -50px 0;
+}
+.prices .prices-links a:nth-of-type(4):before {
+  background-position: -75px 0;
+}
+/***********************************************************************************************************************
+************ calculator
+***********************************************************************************************************************/
+.calculator {
+  margin-bottom: 40px;
+}
+.calculator .text {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 20px;
+  color: #0b5c8e;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.calculator .slider-wrap {
+  padding: 50px;
+  background: #fff;
+}
+.calculator .slide {
+  white-space: nowrap;
+  margin: 0 0 0 40px;
+}
+.calculator .image-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 129px;
+  height: 129px;
+  border: 1px solid #dedede;
+  margin-right: 25px;
+}
+.calculator .data {
+  display: inline-block;
+  vertical-align: middle;
+}
+.calculator .data .title {
+  font-family: 'Exo2 Bold', sans-serif;
+  font-size: 17px;
+}
+.calculator .data .current-price {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ff6926;
+  font-family: "PT Sans Bold", sans-serif;
+  margin-right: 10px;
+}
+.calculator .data .old-prices {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: line-through;
+}
+.calculator .calculator-footer {
+  background: url(../source/images/background-calculator-footer.jpg) left top;
+  background-size: cover;
+  text-align: center;
+  padding: 40px 0;
+  position: relative;
+  border: 10px solid #fff;
+  margin-bottom: 20px;
+}
+.calculator .calculator-footer .text {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding-left: 110px;
+  position: relative;
+}
+.calculator .calculator-footer .text:before {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #fff url(../source/images/icon-calculator.png) no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calculator .calculator-footer h2 {
+  color: #6ed0ff;
+  margin-bottom: 5px;
+}
+.calculator .calculator-footer span {
+  text-transform: none;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1;
+}
+.calculator button {
+  position: absolute;
+  margin: auto;
+  right: 55px;
+  top: 0;
+  bottom: 0;
+}
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
@@ -565,3 +1087,27 @@ footer[role='contentinfo'] .wrapper-inner:after {
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+************ seo-text
+***********************************************************************************************************************/
+.seo-text {
+  padding: 40px 0 0;
+}
+.seo-text p {
+  font-size: 14px;
+}
+/***********************************************************************************************************************
+************ modals
+***********************************************************************************************************************/
+.window {
+  display: none;
+}

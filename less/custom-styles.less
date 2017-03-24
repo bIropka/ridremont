@@ -22,6 +22,11 @@
   src: url("../source/fonts/ptsansbold.woff") format("woff"), url("../source/fonts/ptsansbold.ttf") format("truetype"), url("../source/fonts/ptsansbold.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: 'PT Sans Italic';
+  src: url("../source/fonts/ptsansitalic.woff") format("woff"), url("../source/fonts/ptsansitalic.ttf") format("truetype"), url("../source/fonts/ptsansitalic.woff2") format("woff2");
+}
+
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
@@ -35,6 +40,22 @@
   -ms-transform: skew(60deg) rotate(60deg);
   -o-transform: skew(60deg) rotate(60deg);
   transform: skew(60deg) rotate(60deg);
+}
+
+.clearfix() {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+}
+
+.circle() {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 * {
@@ -131,6 +152,24 @@ a:focus, button:focus {
 
 }
 
+.image-wrap {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+}
+
 .slider-wrap {
   opacity: 0;
   position: relative;
@@ -179,6 +218,54 @@ a:focus, button:focus {
 
   }
 
+}
+
+.top-arrow {
+  position: fixed;
+  left: ~"calc(50% + 665px)";
+  bottom: 320px;
+  text-align: center;
+  cursor: pointer;
+  transition: .4s;
+
+  .fa {
+    display: block;
+    font-size: 52px;
+    color: #cbcbcb;
+  }
+
+  span {
+    font-family: "PT Sans Bold", sans-serif;
+    text-decoration: underline;
+    color: @color-blue;
+  }
+
+  &:hover {
+
+    .fa {
+      color: @color-blue;
+    }
+
+    span {
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+h2 {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 20px;
+  color: @color-blue;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 1.4;
+  hyphens: auto;
 }
 
 /***********************************************************************************************************************
@@ -684,6 +771,549 @@ footer[role='contentinfo'] {
 ************ advantages
 ***********************************************************************************************************************/
 
+.advantages {
+  background: url(../source/images/background-advantages.jpg);
+  background-size: cover;
+  margin-bottom: 40px;
+
+  ul {
+    .clearfix();
+    padding: 45px 0 35px;
+
+    li {
+      display: block;
+      width: 25%;
+      float: left;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        margin: 0 auto 20px;
+        width: 80px;
+        height: 80px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: @color-orange url(../source/images/sprite-advantages.png);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 175px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: 40px;
+        left: 71%;
+      }
+
+      &:nth-child(2):before {
+        background-position: -80px 0;
+      }
+
+      &:nth-child(3):before {
+        background-position: -160px 0;
+      }
+
+      &:nth-child(4):before {
+        background-position: -240px 0;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      .title {
+        font-family: "PT Sans Bold", sans-serif;
+        color: #75c4f5;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        color: #fff;
+        font-size: 15px;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 25px;
+          background: url(../source/images/decor-advantages.png);
+          margin: 15px auto 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/***********************************************************************************************************************
+************ services
+***********************************************************************************************************************/
+
+.services {
+  margin-bottom: 40px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    li {
+      display: block;
+      text-align: center;
+
+      .image-wrap {
+        .circle();
+        width: 129px;
+        height: 129px;
+      }
+
+      .title {
+        display: inline-block;
+        font-family: 'Exo2 Bold', sans-serif;
+        color: @color-blue;
+        text-transform: uppercase;
+        margin: 15px 0 10px;
+      }
+
+      .service-cost {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        background: @color-orange;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-bottom: 5px solid @color-orange;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          margin: 0 auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -5px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/***********************************************************************************************************************
+************ seo
+***********************************************************************************************************************/
+
+.seo {
+  background: #fff url(../source/images/background-seo.png) no-repeat right bottom;
+  padding: 35px 40px;
+  margin-bottom: 40px;
+
+  ul {
+    .clearfix();
+    display: block;
+    max-width: 700px;
+    margin: 20px 0;
+
+    li {
+      display: block;
+      float: left;
+      width: 50%;
+      padding-left: 60px;
+      position: relative;
+      font-family: "PT Sans Bold", sans-serif;
+      font-size: 17px;
+      margin-bottom: 25px;
+
+      .fa {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border: 2px solid @color-blue;
+        color: @color-blue;
+        line-height: 21px;
+        text-align: center;
+        font-size: 18px;
+        position: absolute;
+        left: 20px;
+        top: 0;
+      }
+
+      span {
+        display: block;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+
+    }
+
+  }
+
+  .note {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "PT Sans Italic", sans-serif;
+    max-width: 450px;
+    margin-right: 20px;
+  }
+
+  button {
+    display: inline-block;
+  }
+  
+}
+
+/***********************************************************************************************************************
+************ prices
+***********************************************************************************************************************/
+
+.prices {
+  background: #809fb1;
+  padding: 35px 40px 0 40px;
+  position: relative;
+  margin-bottom: 40px;
+
+  h2 {
+    color: #fff;
+  }
+
+  .all-prices {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 37px;
+    right: 40px;
+    padding-left: 35px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 21px;
+      height: 21px;
+      background: url(../source/images/icon-prices.png);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+  }
+
+  .items {
+    .clearfix();
+    display: block;
+    margin-top: 30px;
+
+    .item {
+      display: block;
+      width: 22.75%;
+      margin: 0 3% 0 0;
+      float: left;
+      background: #fff;
+      padding: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  .image-wrap {
+    width: 100%;
+    padding-top: ~"calc(100% - 20px)";
+    border: 10px solid #fff;
+    -webkit-box-shadow: 0 0 0 1px #c6c6c6;
+    -moz-box-shadow: 0 0 0 1px #c6c6c6;
+    box-shadow: 0 0 0 1px #c6c6c6;
+  }
+
+  .title {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 15px;
+    color: @color-blue;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 8px;
+      background: url(../source/images/decor-prices.png);
+      margin: 10px auto 15px;
+    }
+
+  }
+
+  .price-value {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    border-top: 1px dotted #000;
+    padding: 15px 0;
+
+    li {
+      display: block;
+      line-height: 1;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 8px;
+
+      &:before {
+        .circle();
+        content: '';
+        display: block;
+        vertical-align: middle;
+        width: 4px;
+        height: 4px;
+        background: @color-orange;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 25px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  .show-portfolio,
+  .show-cost {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 46px;
+    border: 2px solid #2a393e;
+    background: #2a393e;
+    font-family: 'Exo2 Bold', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background: #fff;
+      color: #2a393e;
+    }
+
+    &:active {
+      line-height: 50px;
+    }
+
+  }
+
+  .show-cost {
+    border: 2px solid @color-orange;
+    background: @color-orange;
+    margin-top: 10px;
+
+    &:hover {
+      color: @color-orange;
+    }
+
+  }
+
+  p {
+    color: #fff;
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+
+  .prices-links {
+    display: block;
+    width: ~"calc(100% + 80px)";
+    background: url(../source/images/background-prices-links.jpg);
+    background-size: cover;
+    text-align: center;
+    margin: 0 -40px;
+    padding: 40px 0;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 17px;
+      margin-right: 30px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 21px;
+        margin-right: 10px;
+        background: url(../source/images/sprite-prices-links.png);
+        background-size: cover;
+      }
+
+      &:nth-of-type(2):before {
+        background-position: -25px 0;
+      }
+
+      &:nth-of-type(3):before {
+        background-position: -50px 0;
+      }
+
+      &:nth-of-type(4):before {
+        background-position: -75px 0;
+      }
+
+    }
+
+  }
+
+}
+
+/***********************************************************************************************************************
+************ calculator
+***********************************************************************************************************************/
+
+.calculator {
+  margin-bottom: 40px;
+
+  .text {
+    font-family: "PT Sans Bold", sans-serif;
+    font-size: 20px;
+    color: @color-blue;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .slider-wrap {
+    padding: 50px;
+    background: #fff;
+  }
+
+  .slide {
+    white-space: nowrap;
+    margin: 0 0 0 40px;
+  }
+
+  .image-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    .circle();
+    width: 129px;
+    height: 129px;
+    border: 1px solid #dedede;
+    margin-right: 25px;
+  }
+
+  .data {
+    display: inline-block;
+    vertical-align: middle;
+
+    .title {
+      font-family: 'Exo2 Bold', sans-serif;
+      font-size: 17px;
+    }
+
+    .current-price {
+      display: inline-block;
+      vertical-align: middle;
+      color: @color-orange;
+      font-family: "PT Sans Bold", sans-serif;
+      margin-right: 10px;
+    }
+
+    .old-prices {
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: line-through;
+    }
+
+  }
+
+  .calculator-footer {
+    background: url(../source/images/background-calculator-footer.jpg) left top;
+    background-size: cover;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    border: 10px solid #fff;
+    margin-bottom: 20px;
+
+    .text {
+      display: inline-block;
+      text-align: left;
+      margin: 0;
+      padding-left: 110px;
+      position: relative;
+
+      &:before {
+        .circle();
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: #fff url(../source/images/icon-calculator.png) no-repeat center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+
+    h2 {
+      color: #6ed0ff;
+      margin-bottom: 5px;
+    }
+
+    span {
+      text-transform: none;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1;
+    }
+
+  }
+
+  button {
+    position: absolute;
+    margin:auto;
+    right: 55px;
+    top: 0;
+    bottom: 0;
+  }
+
+}
 
 /***********************************************************************************************************************
 ************ general
@@ -694,27 +1324,55 @@ footer[role='contentinfo'] {
 ************ general
 ***********************************************************************************************************************/
 
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
 
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
 
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
 
+/***********************************************************************************************************************
+************ general
+***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 ************ general
 ***********************************************************************************************************************/
 
+/***********************************************************************************************************************
+************ seo-text
+***********************************************************************************************************************/
+
+.seo-text {
+  padding: 40px 0 0;
+
+  p {
+    font-size: 14px;
+  }
+
+}
 
 /***********************************************************************************************************************
-************ general
+************ modals
 ***********************************************************************************************************************/
+
+.window {
+  display: none;
+}

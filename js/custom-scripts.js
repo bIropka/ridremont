@@ -19,4 +19,12 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('.calculator .slider').slick({
+        appendArrows: '.slider-calc-control',
+        prevArrow: '.slider-calc-prev',
+        nextArrow: '.slider-calc-next',
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+
 });
