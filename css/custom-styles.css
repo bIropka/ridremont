@@ -333,18 +333,6 @@ img {
     color: #0b5c8e;
   }
 }
-.mobile-nav a {
-  display: inline-block;
-  font-family: 'Exo2 Regular', sans-serif;
-  font-size: 24px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-.mobile-nav a span {
-  font-family: inherit;
-  font-size: inherit;
-  color: #0b5c8e;
-}
 .mobile-nav .hours {
   margin: 10px 0;
 }
@@ -437,7 +425,7 @@ header[role='banner'] .wrapper-inner:after {
   background: transparent url(../source/images/sprite-header.png) no-repeat left top;
   background-size: cover;
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
   -webkit-transition: .4s;
   -moz-transition: .4s;
@@ -499,6 +487,11 @@ header[role='banner'] .wrapper-inner:after {
   font-size: inherit;
   line-height: inherit;
 }
+.header-contacts button:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 .callback {
   display: inline-block;
   vertical-align: middle;
@@ -526,9 +519,6 @@ header[role='banner'] .wrapper-inner:after {
   -ms-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
-}
-.callback:hover:before {
-  margin-right: 4px;
 }
 .burger {
   display: none;
@@ -637,6 +627,46 @@ header[role='banner'].fixed .header-contacts .callback {
     width: 150px;
     height: 35px;
     line-height: 35px;
+  }
+  header[role='banner'].fixed .header-contacts a {
+    line-height: 76px;
+    position: absolute;
+    top: 0;
+    right: 75px;
+  }
+}
+@media (max-width: 768px) {
+  header[role='banner'].fixed button {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 0;
+    color: transparent;
+    background: transparent url(../source/images/icon-ruler-blue.png) no-repeat center;
+    background-size: cover;
+    border: 1px solid #0b5c8e;
+  }
+}
+@media (max-width: 640px) {
+  header[role='banner'].fixed .header-contacts {
+    justify-content: center;
+    width: calc(100% - 150px);
+    padding-right: 160px;
+  }
+  header[role='banner'].fixed .header-contacts a {
+    line-height: 76px;
+  }
+}
+@media (max-width: 400px) {
+  header[role='banner'].fixed .header-contacts {
+    width: calc(100% - 100px);
+    padding-right: 110px;
+  }
+  header[role='banner'].fixed .header-contacts a {
+    font-size: 12px;
+    right: 65px;
   }
 }
 /***********************************************************************************************************************
@@ -2411,7 +2441,7 @@ footer[role='contentinfo'] .wrapper-inner:after {
   width: 100%;
   margin-top: 25px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .window form {
     width: 320px;
     top: 50px;

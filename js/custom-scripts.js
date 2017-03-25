@@ -52,14 +52,12 @@ $(document).ready(function() {
 
     if($(window).width() < 1231) {
         $('header .header-links').appendTo('.mobile-nav');
-        $('.header-contacts a').appendTo('.mobile-nav');
         $('.header-contacts .hours').appendTo('.mobile-nav');
         $('.header-contacts .callback').appendTo('.mobile-nav');
     } else {
         $('.header-links').insertBefore('.header-contacts');
         $('.mobile-nav .callback').prependTo('.header-contacts');
         $('.mobile-nav .hours').prependTo('.header-contacts');
-        $('.mobile-nav a').prependTo('.header-contacts');
     }
 
     $(window).resize(function() {
@@ -68,14 +66,12 @@ $(document).ready(function() {
 
         if($(window).width() < 1231) {
             $('header .header-links').appendTo('.mobile-nav');
-            $('.header-contacts a').appendTo('.mobile-nav');
             $('.header-contacts .hours').appendTo('.mobile-nav');
             $('.header-contacts .callback').appendTo('.mobile-nav');
         } else {
             $('.header-links').insertBefore('.header-contacts');
             $('.mobile-nav .callback').prependTo('.header-contacts');
             $('.mobile-nav .hours').prependTo('.header-contacts');
-            $('.mobile-nav a').prependTo('.header-contacts');
         }
 
     });
