@@ -636,23 +636,11 @@ header[role='banner'].fixed .header-contacts .callback {
   }
 }
 @media (max-width: 768px) {
-  header[role='banner'].fixed button {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 0;
-    color: transparent;
-    background: transparent url(../source/images/icon-ruler-blue.png) no-repeat center;
-    background-size: cover;
-    border: 1px solid #0b5c8e;
-  }
   header[role='banner'].fixed .header-contacts a {
     line-height: 76px;
     position: absolute;
     top: 0;
-    right: 75px;
+    right: 50px;
   }
 }
 @media (max-width: 640px) {
@@ -665,7 +653,7 @@ header[role='banner'].fixed .header-contacts .callback {
     line-height: 76px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   header[role='banner'].fixed .header-contacts {
     display: block;
     width: auto;
