@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     });
 
-    if($(window).width() < 1231) {
+    if($(window).width() < 768) {
         $('header .header-links').appendTo('.mobile-nav');
         $('.header-contacts .hours').appendTo('.mobile-nav');
         $('.header-contacts .callback').appendTo('.mobile-nav');
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
         checkHeader();
 
-        if($(window).width() < 1231) {
+        if($(window).width() < 768) {
             $('header .header-links').appendTo('.mobile-nav');
             $('.header-contacts .hours').appendTo('.mobile-nav');
             $('.header-contacts .callback').appendTo('.mobile-nav');
