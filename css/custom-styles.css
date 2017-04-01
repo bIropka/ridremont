@@ -2219,6 +2219,14 @@ footer[role='contentinfo'] .wrapper-inner:after {
 /***********************************************************************************************************************
 ************ news, articles
 ***********************************************************************************************************************/
+.columns {
+  margin-bottom: 40px;
+}
+.columns:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .news,
 .articles {
   display: block;
@@ -2349,10 +2357,206 @@ footer[role='contentinfo'] .wrapper-inner:after {
   }
 }
 /***********************************************************************************************************************
+************ plans
+***********************************************************************************************************************/
+.plan {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.plan .note {
+  display: block;
+  margin: 10px auto 0;
+  width: 100%;
+  max-width: 475px;
+}
+.plan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px 20px 20px 50px;
+  margin: 25px 0 0;
+}
+@media (max-width: 980px) {
+  .plan-item {
+    display: block;
+    padding: 20px;
+  }
+}
+.plan-image {
+  margin-right: 20px;
+}
+.plan-image img {
+  width: auto;
+  height: auto;
+}
+@media (max-width: 980px) {
+  .plan-image {
+    margin-bottom: 30px;
+  }
+}
+.plan-info {
+  max-width: 550px;
+  text-align: left;
+}
+.plan-info .plan-name {
+  display: inline-block;
+  font-size: 17px;
+  font-family: "PT Sans Bold", sans-serif;
+  color: #ff6926;
+  margin: 0 10px 3px 0;
+}
+.plan-info .plan-time {
+  display: inline-block;
+  font-size: 14px;
+  font-family: "PT Sans Bold", sans-serif;
+  color: #2a393e;
+}
+.plan-info .plan-cost {
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 22px;
+  margin: 15px 0 0;
+  color: #0b5c8e;
+}
+.plan-info .plan-cost-note {
+  font-family: 'PT Sans Italic', sans-serif;
+  color: #777;
+}
+.plan-info address {
+  font-style: normal;
+}
+.plan-info .plan-description {
+  margin-bottom: 15px;
+}
+.plan-info .plan-description p {
+  font-size: 14px;
+}
+.plan-info .show-estimate {
+  display: inline-block;
+  vertical-align: middle;
+  width: 205px;
+  height: 46px;
+  line-height: 46px;
+  border: 2px solid #2a393e;
+  background: #2a393e;
+  font-family: 'Exo2 Bold', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.plan-info .show-estimate:hover {
+  background: #fff;
+  color: #2a393e;
+}
+.plan-info .show-estimate:active {
+  line-height: 50px;
+}
+.plan-info .custom-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: 1230px) {
+  .plan-info .custom-button,
+  .plan-info .show-estimate {
+    width: 180px;
+  }
+}
+@media (max-width: 980px) {
+  .plan-info {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .plan-info .custom-button,
+  .plan-info .show-estimate {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 10px;
+    margin: 10px 20px 10px 0;
+  }
+  .plan-info .show-estimate {
+    line-height: 31px;
+  }
+  .plan-info .show-estimate:active {
+    line-height: 35px;
+  }
+}
+.plan-photo {
+  width: 365px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  margin-left: 20px;
+}
+.plan-photo:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: calc(50% - 8px);
+  top: 0;
+  z-index: 1;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+.plan-photo:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 16px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 8px);
+  z-index: 1;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+.plan-photo:hover {
+  -webkit-box-shadow: 0 0 0 2px #d8d8d8;
+  -moz-box-shadow: 0 0 0 2px #d8d8d8;
+  box-shadow: 0 0 0 2px #d8d8d8;
+}
+.plan-photo:hover:before {
+  width: 0;
+  left: 50%;
+}
+.plan-photo:hover:after {
+  height: 0;
+  top: 50%;
+}
+@media (max-width: 980px) {
+  .plan-photo {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .plan-photo {
+    width: 100%;
+  }
+}
+/***********************************************************************************************************************
 ************ seo-text
 ***********************************************************************************************************************/
 .seo-text {
-  clear: both;
   padding: 40px 0 0;
 }
 .seo-text p {
@@ -2372,7 +2576,7 @@ footer[role='contentinfo'] .wrapper-inner:after {
   overflow: auto;
   z-index: 1001;
 }
-.window form {
+.window .window-inner {
   display: block;
   width: 355px;
   position: absolute;
@@ -2382,6 +2586,12 @@ footer[role='contentinfo'] .wrapper-inner:after {
   top: 200px;
   background: #fff;
   padding: 35px 40px;
+}
+.window-estimate {
+  display: block;
+}
+.window-estimate .window-inner {
+  width: 820px;
 }
 .window .title {
   font-family: "PT Sans Bold", sans-serif;
@@ -2465,13 +2675,57 @@ footer[role='contentinfo'] .wrapper-inner:after {
   width: 100%;
   margin-top: 25px;
 }
-@media (max-width: 768px) {
-  .window form {
-    width: 320px;
-    top: 50px;
+.window table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.window table td {
+  padding: 20px;
+  font-size: 14px;
+  border-right: 2px solid #fff;
+  background: #f3f3f3;
+}
+.window table td:nth-of-type(2) {
+  min-width: 55px;
+}
+.window table td:last-of-type {
+  border-right: 0;
+}
+.window table tr:nth-of-type(2n) td {
+  background: #f7fcff;
+}
+.window .total {
+  text-align: right;
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 17px;
+}
+.window .summa {
+  text-align: right;
+  font-family: "PT Sans Bold", sans-serif;
+  font-size: 22px;
+  color: #0b5c8e;
+}
+@media (max-width: 980px) {
+  .window-estimate .window-inner {
+    width: 100%!important;
   }
   .window .fa-close {
     right: 0;
     top: -50px;
+  }
+}
+@media (max-width: 768px) {
+  .window .window-inner {
+    width: 320px;
+    top: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .window-estimate .window-inner {
+    padding: 20px!important;
+  }
+  .window table td {
+    padding: 10px;
   }
 }

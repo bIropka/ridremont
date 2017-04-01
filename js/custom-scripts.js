@@ -114,6 +114,12 @@ $(document).ready(function() {
 
     });
 
+    $('.show-estimate').click(function() {
+
+        $('.window-estimate').fadeIn();
+
+    });
+
     $('.window').click(function (event) {
         $target = $(event.target);
         if (!$target.closest($('.window form')).length) $('.window').fadeOut();
