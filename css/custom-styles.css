@@ -2488,6 +2488,7 @@ footer[role='contentinfo'] .wrapper-inner:after {
   }
 }
 .plan-photo {
+  display: block;
   width: 365px;
   position: relative;
   cursor: pointer;
@@ -2586,9 +2587,6 @@ footer[role='contentinfo'] .wrapper-inner:after {
   top: 200px;
   background: #fff;
   padding: 35px 40px;
-}
-.window-estimate {
-  display: block;
 }
 .window-estimate .window-inner {
   width: 820px;
