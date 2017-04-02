@@ -122,7 +122,7 @@ $(document).ready(function() {
 
     $('.window').click(function (event) {
         $target = $(event.target);
-        if (!$target.closest($('.window form')).length) $('.window').fadeOut();
+        if (!$target.closest($('.window-inner')).length) $('.window').fadeOut();
         if ($target.hasClass('fa-close')) $('.window').fadeOut();
     });
 
